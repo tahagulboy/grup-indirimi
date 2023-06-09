@@ -3,14 +3,14 @@
 {% block content %}
 <main class="container my-4" id="cartList">
 	<!-- Featured Products -->
-	<h3 class="my-4 border-bottom pb-1">Cart ({{totalitems}})</h3>
+	<h3 class="my-4 border-bottom pb-1">Sepet ({{totalitems}})</h3>
 	<table class="table table-bordered">
 		<thead>
 			<tr>
-				<th>Product</th>
-				<th>Qty</th>
-				<th>Price</th>
-				<th>Total</th>
+				<th>Ürün</th>
+				<th>Adet</th>
+				<th>Fiyat</th>
+				<th>Toplam</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -33,13 +33,13 @@
 		<tfoot>
 			<tr>
 				<td colspan="2"></td>
-				<th>Total</th>
-				<th>Rs. {{total_amt}}</th>
+				<th>Toplam</th>
+				<th>TL. {{total_amt}}</th>
 			</tr>
 			{% if totalitems %}
 			<tr>
 				<td colspan="4" align="right">
-					<a href="{% url 'checkout' %}" class="btn btn-dark btn-sm">Checkout <i class="fa fa-long-arrow-alt-right"></i></a>
+					<a href="{% url 'checkout' %}" class="btn btn-dark btn-sm">Ödeme <i class="fa fa-long-arrow-alt-right"></i></a>
 				</td>
 			</tr>
 			{% endif %}
