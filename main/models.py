@@ -7,7 +7,7 @@ class Banner(models.Model):
     alt_text=models.CharField(max_length=300)
 
     class Meta:
-        verbose_name_plural='1. Banners'
+        verbose_name_plural='1. Afişler'
 
     def image_tag(self):
         return mark_safe('<img src="%s" width="100" />' % (self.img.url))
@@ -21,7 +21,7 @@ class Category(models.Model):
     image=models.ImageField(upload_to="cat_imgs/")
 
     class Meta:
-        verbose_name_plural='2. Categories'
+        verbose_name_plural='2. Kategoriler'
 
     def image_tag(self):
         return mark_safe('<img src="%s" width="50" height="50" />' % (self.image.url))
@@ -35,7 +35,7 @@ class Brand(models.Model):
     image=models.ImageField(upload_to="brand_imgs/")
 
     class Meta:
-        verbose_name_plural='3. Brands'
+        verbose_name_plural='3. Markalar'
 
     def __str__(self):
         return self.title
@@ -46,7 +46,7 @@ class Color(models.Model):
     color_code=models.CharField(max_length=100)
 
     class Meta:
-        verbose_name_plural='4. Colors'
+        verbose_name_plural='4. Renkler'
 
     def color_bg(self):
         return mark_safe('<div style="width:30px; height:30px; background-color:%s"></div>' % (self.color_code))
@@ -59,7 +59,7 @@ class Size(models.Model):
     title=models.CharField(max_length=100)
 
     class Meta:
-        verbose_name_plural='5. Sizes'
+        verbose_name_plural='5. Boyutlar'
 
     def __str__(self):
         return self.title
@@ -77,7 +77,7 @@ class Product(models.Model):
     is_featured=models.BooleanField(default=False)
 
     class Meta:
-        verbose_name_plural='6. Products'
+        verbose_name_plural='6. Ürünler'
 
     def __str__(self):
         return self.title
@@ -91,7 +91,7 @@ class ProductAttribute(models.Model):
     image=models.ImageField(upload_to="product_imgs/",null=True)
 
     class Meta:
-        verbose_name_plural='7. ProductAttributes'
+        verbose_name_plural='7. Ürün Varyasyonları'
 
     def __str__(self):
         return self.product.title
@@ -146,7 +146,7 @@ class ProductReview(models.Model):
     review_rating=models.CharField(choices=RATING,max_length=150)
 
     class Meta:
-        verbose_name_plural='Reviews'
+        verbose_name_plural='Yorumlar'
 
     def get_review_rating(self):
         return self.review_rating
