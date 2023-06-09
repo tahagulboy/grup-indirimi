@@ -6,3 +6,6 @@
 .errorlist li{
 	color: red;
 }
+
+.navbar-bg-custom{background-color: purple;}
+.navbar-brand-custom{color: white;}
