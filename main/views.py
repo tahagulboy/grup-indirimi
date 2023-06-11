@@ -69,10 +69,10 @@ def product_detail(request,slug,id):
 
 	# Check
 	canAdd=True
-	reviewCheck=ProductReview.objects.filter(user=request.user,product=product).count()
-	if request.user.is_authenticated:
-		if reviewCheck > 0:
-			canAdd=False
+	#reviewCheck=ProductReview.objects.filter(user=request.user,product=product).count()
+	#if request.user.is_authenticated:
+		#if reviewCheck > 0:
+			#canAdd=False	
 	# End
 
 	# Fetch reviews
