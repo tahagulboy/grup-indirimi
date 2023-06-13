@@ -113,7 +113,7 @@ class CartOrder(models.Model):
     order_status=models.CharField(choices=status_choice,default='process',max_length=150)
 
     class Meta:
-        verbose_name_plural='8. Orders'
+        verbose_name_plural='8. Siparişler'
 
 # OrderItems
 class CartOrderItems(models.Model):
@@ -126,7 +126,7 @@ class CartOrderItems(models.Model):
     total=models.FloatField()
 
     class Meta:
-        verbose_name_plural='9. Order Items'
+        verbose_name_plural='9. Sipariş Öğeleri'
 
     def image_tag(self):
         return mark_safe('<img src="/media/%s" width="50" height="50" />' % (self.image))
@@ -157,7 +157,7 @@ class Wishlist(models.Model):
     product=models.ForeignKey(Product,on_delete=models.CASCADE)
 
     class Meta:
-        verbose_name_plural='Wishlist'
+        verbose_name_plural='Dilek Listesi'
 
 # AddressBook
 class UserAddressBook(models.Model):
@@ -167,6 +167,6 @@ class UserAddressBook(models.Model):
     status=models.BooleanField(default=False)
 
     class Meta:
-        verbose_name_plural='AddressBook'
+        verbose_name_plural='Adres Defteri'
 
     
